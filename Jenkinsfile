@@ -18,19 +18,8 @@ node {
             archiveArtifacts '**/*.jar'
         
     
-    stage('Build Docker Image') {
-            steps {
-                script {
-                    // Build the Docker image and tag it as "my-application"
-                    sh 'docker build . -t my-application:latest' 
-
-                }
-            }
-        }
-
-
-           
-  //*  stage ('Docker Build') {
+             
+//*    stage ('Docker Build') {
          // Build and push image with Jenkins' docker-plugin
         withDockerServer([uri: "tcp://localhost:4243"]) {
 
