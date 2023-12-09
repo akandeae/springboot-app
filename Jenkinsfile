@@ -18,7 +18,7 @@ node {
             archiveArtifacts '**/*.jar'
         
     
-    }stage('Build Docker Image') {
+    stage('Build Docker Image') {
             steps {
                 script {
                     // Build the Docker image and tag it as "my-application"
