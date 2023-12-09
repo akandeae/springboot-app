@@ -22,7 +22,7 @@ node {
             steps {
                 script {
                     // Build the Docker image and tag it as "my-application"
-                    sh 'docker build -t my-application:latest' .
+                    sh 'docker build . -t my-application:latest' 
 
                 }
             }
