@@ -30,7 +30,7 @@ node {
 
 
            
-    stage ('Docker Build') {
+  //*  stage ('Docker Build') {
          // Build and push image with Jenkins' docker-plugin
         withDockerServer([uri: "tcp://localhost:4243"]) {
 
@@ -41,7 +41,7 @@ node {
             }
         }
     }
-    
+    */
        stage('docker stop container') {
             sh 'docker ps -f name=myContainer -q | xargs --no-run-if-empty docker container stop'
             sh 'docker container ls -a -fname=myContainer -q | xargs -r docker container rm'
